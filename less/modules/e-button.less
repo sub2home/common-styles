@@ -1,16 +1,44 @@
 .button {
   padding: 10px 10px 8px;
   .border-radius(3px);
-  border: 2px solid @onNoteColor50;
+  border: 2px solid @grayLight;
   display: inline-block;
-  cursor: pointer;
+  .btn;
   .border-box;
+  .transition(e('border-color .1s linear, color .1s linear, background .1s linear'));
+  
+  &:active {
+    color: @white;
+    background: @grayLight;
+  }
 }
 
 .dark .button {
-  border-color: rgba(255,255,255,0.5)
+  border-color: rgba(255,255,255,0.5);
+    
+  &:active {
+    background: @white;
+    color: @darkColor;
+    border-color: @white;
+  }
 }
 
 .note .button {
   border-color: @onNoteColor50;
+  
+  &:active {
+    background: @onNoteColor;
+    color: @noteColor;
+    border-color: @onNoteColor;
+  }
+}
+
+.darkNote .button {
+  border-color: @onDarkNoteColor50;
+  
+  &:active {
+    background: @onDarkNoteColor;
+    color: @darkNoteColor;
+    border-color: @onDarkNoteColor;
+  }
 }

@@ -1,9 +1,11 @@
+// Module Styles
+
 #header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: @headerHeight;
+  height: @headerMobileHeight;
   overflow: visible;
   z-index: 9000;
   .translate(0,0,0);
@@ -53,7 +55,7 @@
   background: -ms-linear-gradient(top,  #e4c988 0%,#ecd393 10%,#ecd393 90%,#e4c988 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #e4c988 0%,#ecd393 10%,#ecd393 90%,#e4c988 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4c988', endColorstr='#e4c988',GradientType=0 ); /* IE6-8 */
-  height: @headerHeight;
+  height: inherit;
   z-index: inherit;
 
   // Base styling of header-elements
@@ -62,6 +64,33 @@
     display: table-cell;
     height: 100%;
     .border-box;
-    padding: @headerTopPadding 0 0 10px;
+    vertical-align: middle;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// Module responsiveness
+// --------------------------
+
+// Larger Than Mobile
+
+@media only screen and (min-width : 450px) {
+  
+  #header {
+    height: @headerTabletHeight;
+    
+    &:after {
+      height: 7px;
+      bottom: -6px;
+    }
+  }
+  
+  #headerContent {
+    font-size: 24px;
+    > div {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
   }
 }
