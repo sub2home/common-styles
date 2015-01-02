@@ -202,6 +202,13 @@ input, textarea {
           transform: translate3d(@x, @y, @z);
 }
 
+.transform-origin(@x, @y, @z) {
+  -webkit-transform-origin: @x, @y, @z;
+     -moz-transform-origin: @x, @y, @z;
+       -o-transform-origin: @x, @y, @z;
+          transform-origin: @x, @y, @z;
+}
+
 // Backface visibility
 // Prevent browsers from flickering when using CSS 3D transforms.
 // Default value is `visible`, but can be changed to `hidden
