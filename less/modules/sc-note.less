@@ -3,6 +3,10 @@
   background: @noteBackground;
   z-index: 100;
   color: @onNoteColor;
+  
+  &.above, &.below {
+    padding: 15px;
+  }
 
   &.above {
     border-bottom: 1px solid @onNoteColor50;
@@ -25,5 +29,19 @@
   .darkNote {
     background: @darkNote;
     color: @onDarkNoteColor;
+  }
+}
+
+// Module responsiveness
+// --------------------------
+
+// Larger Than Mobile
+
+@media only screen and (min-width : 450px) {
+  
+  .note {
+    &.above, &.below {
+      padding: 20px;
+    }
   }
 }
