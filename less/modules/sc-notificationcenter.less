@@ -1,0 +1,62 @@
+#notificationCenter {
+  position: fixed;
+  top: -3px;
+  left: 5px;
+  right: 5px;
+  background: @white;
+  .border-radius(3px);
+  .box-shadow(0 1px 3px 0 @globalShadowColorLight);
+  border: 1px solid @grayLighter;
+  z-index: 9999;
+}
+
+.notification {
+  .positioned;
+  padding: 14px 44px 9px 14px;
+  border-bottom: 1px solid @darkerWhite;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  .iClose {
+    position: absolute;
+    top: 15px; // top-right corner if notification is more than one row, baseline if notification is one-row
+    right: 14px;
+    color: @grayLighter;
+  }
+  
+  &.success {
+    color: @greenLight;
+  }
+  
+  &.warning {
+    color: @orange;
+  }
+  
+  &.danger {
+    color: @red;
+  }
+}
+
+// Module responsiveness
+// --------------------------
+
+// Larger Than Mobile
+
+@media only screen and (min-width : 450px) {
+  
+ #notificationCenter {
+   left: 10px;
+   right: 10px;
+ }
+  
+  .notification {
+    padding: 25px 80px 20px 25px;
+    
+    .iClose {
+      top: 27px; 
+      right: 25px;
+    }
+  }
+  
+}
