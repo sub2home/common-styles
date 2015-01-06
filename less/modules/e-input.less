@@ -25,6 +25,104 @@ input {
   color: @onNoteColor;
 }
 
+// Placeholder text
+// -------------------------
+
+input, textarea {
+  &:-moz-placeholder {
+    color: @grayLighter;
+    line-height: inherit;
+  }
+  &:-ms-input-placeholder {
+    color: @grayLighter;
+    line-height: inherit;
+  }
+  &::-webkit-input-placeholder {
+    color: @grayLighter;
+    .positioned;
+    top: 3px;
+  }
+}
+
+.note {
+  input, textarea {
+    &:-moz-placeholder {
+      color: @onNoteColor50;
+      line-height: inherit;
+    }
+    &:-ms-input-placeholder {
+      color: @onNoteColor50;
+      line-height: inherit;
+    }
+    &::-webkit-input-placeholder {
+      color: @onNoteColor50;
+      .positioned;
+      top: 3px;
+    }
+  }
+}
+
+.dark {
+  input, textarea {
+    &:-moz-placeholder {
+      color: rgba(255,255,255,0.5);
+      line-height: inherit;
+    }
+    &:-ms-input-placeholder {
+      color: rgba(255,255,255,0.5);
+      line-height: inherit;
+    }
+    &::-webkit-input-placeholder {
+      color: rgba(255,255,255,0.5);
+      .positioned;
+      top: 3px;
+    }
+  }
+}
+
+.note {
+  input, textarea {
+    &:-moz-placeholder {
+      color: @onNoteColor50;
+      line-height: inherit;
+    }
+    &:-ms-input-placeholder {
+      color: @onNoteColor50;
+      line-height: inherit;
+    }
+    &::-webkit-input-placeholder {
+      color: @onNoteColor50;
+      .positioned;
+      top: 3px;
+    }
+  }
+}
+
+#header {
+  input, textarea {
+    &:-moz-placeholder {
+      color: @onHeaderColor50;
+      line-height: inherit;
+    }
+    &:-ms-input-placeholder {
+      color: @onHeaderColor50;
+      line-height: inherit;
+    }
+    &::-webkit-input-placeholder {
+      color: @onHeaderColor50;
+      .positioned;
+      top: 3px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
 
 // Module responsiveness
 // --------------------------
