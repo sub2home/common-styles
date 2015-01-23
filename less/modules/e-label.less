@@ -1,0 +1,17 @@
+.label {
+  display: inline-block;
+  font-size: 80%;
+  line-height: 1;
+  color: @white;
+  background: @grayDark;
+  padding: 4px 4px 1px;
+  .border-radius(2px);
+  vertical-align: baseline;
+  .border-box;
+  
+  &.framed {
+    border: 1px solid @grayDark;
+    background: none;
+    color: @grayDark;
+  }
+}

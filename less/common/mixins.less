@@ -368,7 +368,7 @@
   cursor: pointer;
 }
 
-// Table-row scaffolding mixin
+// Table-row scaffolding mixin for filling space dynamically
 
 
 .sc-tr {
@@ -386,6 +386,30 @@
     }
   }
 }
+
+// basic table-cell layout
+
+.sc-tc {
+  display: table;
+  
+  > div {
+    display: table-cell;
+  }
+}
+
+// 100% width table-cell layout
+
+.sc-tc100 {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  
+  > div {
+    display: table-cell;
+  }
+}
+
+
 
 // Fix table-row constraints with a container
 
